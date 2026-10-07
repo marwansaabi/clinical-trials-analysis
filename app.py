@@ -163,8 +163,9 @@ with tab2:
                              fmt="{:,.0f}"), width="stretch")
         st.caption("CHUS = Santiago de Compostela · CHUAC = A Coruña · CHUVI = Vigo · HULA = Lugo · CHUP = Pontevedra · "
                    "CHUO = Ourense · CHUF = Ferrol. "
-                   "Hospital names appear in dozens of spellings in the registry; they were grouped with keyword rules. "
-                   "Sites named generically by sponsors (\"Research Site\") cannot be assigned, so these are lower bounds.")
+                   "Hospital names are inconsistent in the registry (the A Coruña hospital alone appears under several "
+                   "spellings and its former name, \"Hospital Juan Canalejo\"), so they were grouped with keyword rules. "
+                   "Some sponsors list their sites only as \"Research Site\", so the real numbers are somewhat higher.")
         table(g)
 
 # ---------------------------------------------------------------- 3. Alzheimer's

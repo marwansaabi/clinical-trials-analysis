@@ -59,10 +59,11 @@ streamlit run app.py
   (`sql/00_views.sql`). The rules check, for example, that "not due to safety reasons" is not counted as a safety
   problem. 17% of the reasons don't match any rule ("Other") and 11% of failed trials give no reason at all.
 - **Disease areas** come from MeSH terms (the standard medical vocabulary). A trial can belong to several areas.
-- **Hospital names in Galicia** appear in many spellings ("Complejo Hospitalario Universitario A Coruña",
-  "Complexo Hospitalario…", "Hosp Univ A Coruna", "Hospital Juan Canalejo"…). I grouped them into the 7 university
-  hospital complexes with keyword rules. Sites named generically by sponsors ("Research Site") cannot be assigned,
-  so these counts are lower bounds.
+- **Hospital names** are inconsistent in the registry. The A Coruña university hospital alone appears as
+  "Complejo Hospitalario Universitario A Coruña", "Complexo Hospitalario Universitario A Coruña", "Hosp Univ A Coruna"
+  or by its former name, "Hospital Juan Canalejo". I grouped the different names of Galicia's seven public university
+  hospitals with keyword rules. Some sponsors list their sites only as "Research Site", which can't be linked to a
+  hospital, so the real numbers are somewhat higher than the ones shown.
 
 ## Limitations
 - ClinicalTrials.gov is a US registry. European trials are well covered but not completely.
