@@ -159,7 +159,7 @@ with tab2:
     with col2:
         st.subheader("Galicia: trials by university hospital complex")
         g = load("galicia_hospitals")
-        st.plotly_chart(hbar(g, "hospital", "trials", {"CHU Santiago de Compostela", "CHU A Coruña"}, "Trials",
+        st.plotly_chart(hbar(g, "hospital", "trials", {"CHU Santiago de Compostela", "CHUAC"}, "Trials",
                              fmt="{:,.0f}"), width="stretch")
         st.caption("Hospital names appear in dozens of spellings in the registry; they were grouped with keyword rules. "
                    "Sites named generically by sponsors (\"Research Site\") cannot be assigned, so these are lower bounds.")

@@ -68,7 +68,7 @@ FROM (
     SELECT nct_id,
         CASE
             WHEN regexp_matches(n, 'canalejo|chuac|(complejo|complexo|hospital|hosp)\.? ?(hospitalario )?(univ|universitario)?\.? ?(de )?(a |la )?coru') OR regexp_matches(n, 'oncologico de galicia') AND c LIKE '%coru%'
-                THEN 'CHU A Coruña'
+                THEN 'CHUAC'
             WHEN regexp_matches(n, 'chus|santiago|clinico universitario de santiago|conxo')
                 THEN 'CHU Santiago de Compostela'
             WHEN regexp_matches(n, 'vigo|cunqueiro|meixoeiro|xeral|chuvi')
