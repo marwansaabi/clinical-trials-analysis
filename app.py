@@ -53,7 +53,7 @@ def hbar(df, y, x, highlight, xtitle, hover_extra=None, fmt="{:.1f}%"):
 
 def table(df):
     with st.expander("See the data"):
-        st.dataframe(df, hide_index=True, use_container_width=True)
+        st.dataframe(df, hide_index=True, width="stretch")
 
 
 phase = load("failure_by_phase")
@@ -90,7 +90,7 @@ with tab1:
     r = given.copy()
     r["pct"] = 100 * r["trials"] / r["trials"].sum()
     st.plotly_chart(hbar(r, "reason", "pct", {"Low recruitment / feasibility"}, "% of failed trials with a reason",
-                         hover_extra="trials"), use_container_width=True)
+                         hover_extra="trials"), width="stretch")
     table(reasons)
 
     st.subheader("Industry and academia fail for different reasons")
@@ -105,7 +105,7 @@ with tab1:
                          "sponsor_type": "Lead sponsor"})
     fig = style(fig, height=380, xtitle="% of that sponsor's failed trials")
     fig.update_layout(showlegend=True, legend=dict(orientation="h", y=1.08, x=0, title=None))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     table(load("stop_reasons_by_sponsor"))
 
     col1, col2 = st.columns(2)
@@ -114,13 +114,13 @@ with tab1:
         p = phase.copy()
         p["phase"] = p["phase"].map(PHASE_LABELS)
         st.plotly_chart(hbar(p, "phase", "failure_rate_pct", {"Phase 2", "Phase 1/2"}, "Failure rate",
-                             hover_extra="trials"), use_container_width=True)
+                             hover_extra="trials"), width="stretch")
         table(phase)
     with col2:
         st.subheader("Cancer trials fail the most")
         a = load("failure_by_area")
         st.plotly_chart(hbar(a, "area", "failure_rate_pct", {"Neoplasms"}, "Failure rate", hover_extra="trials"),
-                        use_container_width=True)
+                        width="stretch")
         table(a)
 
 # ---------------------------------------------------------------- 2. Spain
@@ -128,7 +128,7 @@ with tab2:
     st.subheader("Spain is the 4th country in Europe for clinical trials")
     e = europe.copy()
     st.plotly_chart(hbar(e, "country", "trials", {"Spain"}, "Interventional trials with a site in the country",
-                         fmt="{:,.0f}"), use_container_width=True)
+                         fmt="{:,.0f}"), width="stretch")
     table(europe)
 
     col1, col2 = st.columns(2)
@@ -139,14 +139,14 @@ with tab2:
                                    line=dict(color=ACCENT, width=2), marker=dict(size=8),
                                    hovertemplate="%{x}: %{y:,} trials<extra></extra>"))
         fig.update_yaxes(rangemode="tozero")
-        st.plotly_chart(style(fig, xtitle="Start year", ytitle="Trials started"), use_container_width=True)
+        st.plotly_chart(style(fig, xtitle="Start year", ytitle="Trials started"), width="stretch")
     with col2:
         st.subheader("…and half are now led by non-industry sponsors")
         fig = go.Figure(go.Scatter(x=y["start_year"], y=y["industry_pct"], mode="lines+markers",
                                    line=dict(color=ACCENT, width=2), marker=dict(size=8),
                                    hovertemplate="%{x}: %{y:.1f}% industry-led<extra></extra>"))
         fig.update_yaxes(range=[0, 100])
-        st.plotly_chart(style(fig, xtitle="Start year", ytitle="% led by industry"), use_container_width=True)
+        st.plotly_chart(style(fig, xtitle="Start year", ytitle="% led by industry"), width="stretch")
     table(y)
 
     col1, col2 = st.columns(2)
@@ -154,13 +154,13 @@ with tab2:
         st.subheader("A Coruña and Santiago are in Spain's top 10")
         cities = load("spain_top_cities")
         st.plotly_chart(hbar(cities, "city", "trials", {"A Coruña", "Santiago de Compostela"}, "Trials",
-                             fmt="{:,.0f}"), use_container_width=True)
+                             fmt="{:,.0f}"), width="stretch")
         table(cities)
     with col2:
         st.subheader("Galicia: trials by university hospital complex")
         g = load("galicia_hospitals")
         st.plotly_chart(hbar(g, "hospital", "trials", {"CHU Santiago de Compostela", "CHU A Coruña"}, "Trials",
-                             fmt="{:,.0f}"), use_container_width=True)
+                             fmt="{:,.0f}"), width="stretch")
         st.caption("Hospital names appear in dozens of spellings in the registry; they were grouped with keyword rules. "
                    "Sites named generically by sponsors (\"Research Site\") cannot be assigned, so these are lower bounds.")
         table(g)
@@ -181,7 +181,7 @@ with tab3:
     fig.update_traces(texttemplate="%{text:.1f}%", textposition="outside")
     fig = style(fig, height=380, ytitle="Failure rate (%)")
     fig.update_layout(showlegend=True, legend=dict(orientation="h", y=1.1, x=0, title=None))
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
     table(vs)
 
     col1, col2 = st.columns(2)
@@ -197,7 +197,7 @@ with tab3:
                      labels={"pct": "% of failed trials with a reason", "reason": "", "group": ""})
         fig = style(fig, height=380, xtitle="% of failed trials with a reason")
         fig.update_layout(showlegend=True, legend=dict(orientation="h", y=1.1, x=0, title=None))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         table(load("alzheimer_stop_reasons"))
     with col2:
         st.subheader("Research keeps growing, but industry's share has halved")
@@ -212,7 +212,7 @@ with tab3:
         fig = style(fig, height=380, xtitle="Start year", ytitle="Alzheimer's trials started")
         fig.update_layout(barmode="stack", bargap=0.15, showlegend=True,
                           legend=dict(orientation="h", y=1.1, x=0, title=None))
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
         table(load("alzheimer_by_year"))
 
 # ---------------------------------------------------------------- About
