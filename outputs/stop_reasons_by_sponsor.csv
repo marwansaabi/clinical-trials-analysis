@@ -1,0 +1,31 @@
+sponsor_type,reason,trials,pct_within_sponsor
+Government,Low recruitment / feasibility,584,41.1
+Government,Other,263,18.5
+Government,Investigator / logistics,134,9.4
+Government,Sponsor / business decision,122,8.6
+Government,Funding,107,7.5
+Government,COVID-19,82,5.8
+Government,Efficacy / futility,53,3.7
+Government,Safety,32,2.3
+Government,Regulatory / ethics,29,2.0
+Government,Never started,16,1.1
+Industry,Sponsor / business decision,4005,34.3
+Industry,Low recruitment / feasibility,2934,25.2
+Industry,Other,1952,16.7
+Industry,Efficacy / futility,1085,9.3
+Industry,Safety,696,6.0
+Industry,COVID-19,348,3.0
+Industry,Funding,248,2.1
+Industry,Regulatory / ethics,204,1.7
+Industry,Investigator / logistics,99,0.8
+Industry,Never started,93,0.8
+"Universities, hospitals & others",Low recruitment / feasibility,11363,43.8
+"Universities, hospitals & others",Other,4577,17.6
+"Universities, hospitals & others",Funding,2983,11.5
+"Universities, hospitals & others",Investigator / logistics,2185,8.4
+"Universities, hospitals & others",COVID-19,1644,6.3
+"Universities, hospitals & others",Sponsor / business decision,1162,4.5
+"Universities, hospitals & others",Efficacy / futility,726,2.8
+"Universities, hospitals & others",Regulatory / ethics,575,2.2
+"Universities, hospitals & others",Safety,420,1.6
+"Universities, hospitals & others",Never started,322,1.2
