@@ -32,7 +32,7 @@ Out of 302,904 finished interventional trials, **43,749 (14.4%) failed**, meanin
 - **Non-industry research has grown the most:** industry led 72% of Spanish trials in 2005, and about
   50% today.
 - **A Coruña and Santiago de Compostela are in Spain's top 10 cities** (8th and 9th, with ~1,580 trials each),
-  above Zaragoza or Córdoba. CHU Santiago (889 trials) and CHUAC (754) lead in Galicia.
+  above Zaragoza or Córdoba. CHUS (Santiago, 889 trials) and CHUAC (A Coruña, 754) lead in Galicia.
 
 ### 3. Alzheimer's trials fail late, when it costs the most
 - In phases 1 and 2, Alzheimer's trials fail at a similar rate to other trials. **In phase 3 they fail almost
