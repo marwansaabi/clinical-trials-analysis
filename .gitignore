@@ -1,0 +1,8 @@
+# Datos y credenciales: nunca se suben a GitHub
+data/
+*.duckdb
+*.duckdb.wal
+.env
+__pycache__/
+.DS_Store
+.Rhistory
