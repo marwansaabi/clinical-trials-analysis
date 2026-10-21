@@ -12,7 +12,7 @@ import streamlit as st
 
 OUT = Path(__file__).parent / "outputs"
 
-st.set_page_config(page_title="Why Clinical Trials Fail", page_icon="🧪", layout="wide")
+st.set_page_config(page_title="Why Clinical Trials Fail", page_icon=":material/clinical_notes:", layout="wide")
 
 ACCENT = "#2a78d6"     # highlighted series
 SECOND = "#eb6834"     # comparison series
