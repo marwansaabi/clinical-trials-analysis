@@ -10,6 +10,8 @@ Three questions:
 
 Tools: SQL (DuckDB), Python, Streamlit + Plotly for the dashboard.
 
+**Live dashboard:** [marwan-clinical-trials.streamlit.app](https://marwan-clinical-trials.streamlit.app)
+
 ## Key findings
 
 ### 1. Most trials don't fail because the treatment doesn't work
